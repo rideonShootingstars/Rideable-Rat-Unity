@@ -77,11 +77,7 @@ public class RideCar : MonoBehaviour
         // Parent the player to the car to ensure they move with it
         player.transform.parent = Car.transform;
 
-        // Disable player movement components
         
-        //player.GetComponent<Rigidbody>().isKinematic = true;
-
-        // Enable car controls (uncomment if you have a car control script)
 
         
     }
@@ -94,15 +90,10 @@ public class RideCar : MonoBehaviour
         // Detach the player from the car
         player.transform.parent = null;
 
-        // Enable player movement components
-        //player.GetComponent<CharacterController>().enabled = true;
-        //player.GetComponent<Rigidbody>().isKinematic = false;
+        
 
         // Position the player slightly in front of the car when dismounting
         player.transform.position = Car.transform.position + Car.transform.forward * 2f;
-
-        // Disable car controls when dismounting (uncomment if you have a car control script)
-        // Car.GetComponent<CarControl>().enabled = false;
 
         Debug.Log("Dismounting the Car");
     }
